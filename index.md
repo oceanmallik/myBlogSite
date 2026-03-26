@@ -12,8 +12,17 @@ I write about things I build, learn, and break while coding.
 {% if site.posts.size > 0 %}
 <div class="posts-feed">
 {% for post in site.posts %}
-	{% assign card_image = post.image | default: '/assets/images/dev_journey.png' %}
-	<article class="post-card">
+	{% assign card_image = post.image %}
+	{% if card_image == nil or card_image == '' %}
+		{% assign img_split = post.content | split: '<img' %}
+		{% if img_split.size > 1 %}
+			{% assign src_split = img_split[1] | split: 'src="' %}
+			{% if src_split.size > 1 %}
+				{% assign card_image = src_split[1] | split: '"' | first %}
+			{% endif %}
+		{% endif %}
+	{% endif %}
+	<article class="post-card{% if card_image == nil or card_image == '' %} post-card--no-media{% endif %}">
 		<div class="post-card-copy">
 			<h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
 			<p class="date">{{ post.date | date: "%B %d, %Y" }}</p>
@@ -21,9 +30,11 @@ I write about things I build, learn, and break while coding.
 			<p>{{ post.excerpt | strip_html | truncate: 180 }}</p>
 			{% endif %}
 		</div>
+		{% if card_image and card_image != '' %}
 		<a class="post-card-media" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title | escape }}">
 			<img src="{{ card_image | relative_url }}" alt="{{ post.title | escape }}" loading="lazy" decoding="async">
 		</a>
+		{% endif %}
 	</article>
 {% endfor %}
 </div>
