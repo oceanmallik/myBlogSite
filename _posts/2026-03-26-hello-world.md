@@ -17,7 +17,6 @@ This blog includes:
 - **Dark mode, Light mode, and Sepia theme** - Toggle between themes
 - **Archive page** - Browse all posts by year
 - **Tags support** - Categorize your posts
-- **RSS feed** - Subscribe to updates
 - **Reading time** - Automatic reading time estimates
 - **SEO optimized** - Sitemaps and metadata
 
