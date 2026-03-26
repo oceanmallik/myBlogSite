@@ -2,8 +2,6 @@
 layout: post
 title: "My Game Dev Journey (So Far)"
 date: 2025-11-22
-category: Journey
-image: /assets/images/dev_journey.jpg
 ---
 
 # Hello fellas! 

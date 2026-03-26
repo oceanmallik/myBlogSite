@@ -2,7 +2,6 @@
 layout: post
 title: "Breaking Math: Introducing the Meme Calculator 🧮💥"
 date: 2026-02-08
-category: Updates
 ---
 
 Have you ever typed `9 + 10` into a calculator and felt disappointed when it gave you the *correct* answer?
