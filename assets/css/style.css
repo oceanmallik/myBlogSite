@@ -40,15 +40,15 @@ html[data-theme="sepia"] {
 }
 
 html[data-theme="lagoon"] {
-    --bg: #031a2a;
-    --bg-top: #0a3551;
-    --surface: #0d2739;
-    --text: #e8f6ff;
-    --muted: #9ec4d8;
-    --border: #2f5c74;
-    --link: #74d4ff;
-    --button-bg: #11415b;
-    --button-text: #e8f6ff;
+    --bg: #0b3f63;
+    --bg-top: #47a8d8;
+    --surface: #0f5378;
+    --text: #f3fbff;
+    --muted: #b9dcf0;
+    --border: #7fc1e3;
+    --link: #d4f1ff;
+    --button-bg: #0a6a98;
+    --button-text: #ffffff;
 }
 
 * {
