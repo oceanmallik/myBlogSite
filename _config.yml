@@ -3,9 +3,15 @@ description: Notes, tutorials, and experiments by Ocean Mallik.
 url: "https://blog.oceanmallik.com"
 baseurl: ""
 timezone: Asia/Kolkata
+author: Ocean Mallik
+email: hello@oceanmallik.com
 
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
 
 defaults:
   - scope:
@@ -16,3 +22,4 @@ defaults:
 
 exclude:
   - README.md
+  - .gitignore

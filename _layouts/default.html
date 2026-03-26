@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="author" content="{{ site.author }}">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
+    <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <script>
@@ -30,7 +38,9 @@
         </div>
         <nav>
             <a href="{{ '/' | relative_url }}">Home</a>
+            <a href="{{ '/archive/' | relative_url }}">Archive</a>
             <a href="{{ '/about/' | relative_url }}">About</a>
+            <a href="{{ '/feed.xml' | relative_url }}" title="RSS Feed">RSS</a>
         </nav>
     </header>
 
@@ -39,7 +49,14 @@
     </main>
 
     <footer>
-        <p>&copy; {{ 'now' | date: '%Y' }} Ocean Mallik</p>
+        <div class="footer-content">
+            <p>&copy; {{ 'now' | date: '%Y' }} {{ site.author }}. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="{{ '/feed.xml' | relative_url }}">RSS Feed</a>
+                <a href="{{ '/sitemap.xml' | relative_url }}">Sitemap</a>
+                <a href="{{ '/archive/' | relative_url }}">Archive</a>
+            </div>
+        </div>
     </footer>
 
     <script>
