@@ -69,6 +69,14 @@
                 document.documentElement.setAttribute("data-theme", theme);
                 localStorage.setItem("theme", theme);
                 button.textContent = "Theme: " + labels[theme];
+
+                if (theme === "sepia") {
+                    document.body.classList.remove("theme-fade-sepia");
+                    void document.body.offsetWidth;
+                    document.body.classList.add("theme-fade-sepia");
+                } else {
+                    document.body.classList.remove("theme-fade-sepia");
+                }
             }
 
             applyTheme(currentTheme);

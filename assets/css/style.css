@@ -65,6 +65,19 @@ body {
     transition: background-color 0.4s ease, color 0.4s ease, background 0.4s ease;
 }
 
+@keyframes sepiaThemeFade {
+    from {
+        opacity: 0.9;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body.theme-fade-sepia {
+    animation: sepiaThemeFade 0.4s ease;
+}
+
 main,
 header,
 footer {
