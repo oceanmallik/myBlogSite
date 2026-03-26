@@ -32,7 +32,7 @@
 <body>
     <header>
         <div class="header-row">
-            <h1><a href="{{ '/' | relative_url }}">{% if site.title contains ' Talks' %}{{ site.title | replace: ' Talks', '' }} <span class="brand-talks">Talks</span>{% else %}{{ site.title }}{% endif %}</a></h1>
+            <h1><a class="site-brand" href="{{ '/' | relative_url }}">{% if site.title contains ' Talks' %}<span class="brand-main">{{ site.title | replace: ' Talks', '' }}</span><span class="brand-talks">Talks</span>{% else %}{{ site.title }}{% endif %}</a></h1>
             <button id="theme-toggle" type="button" aria-label="Cycle through color themes">Theme: Dark</button>
         </div>
         <nav>
