@@ -449,21 +449,19 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-.support-card-text h2 {
-    margin: 0;
-    font-size: 1.15rem;
+    border: none;
+    background: transparent;
+    padding: 0;
 }
 
 .support-button {
     display: inline-block;
     margin-top: 0.6rem;
-    border: 1px solid var(--link);
+    border: 1px solid #c93b2b;
     border-radius: 999px;
     padding: 0.55rem 1.1rem;
-    background: var(--link);
-    color: var(--button-text);
+    background: #e04b3a;
+    color: #ffffff;
     font-family: var(--ui);
     font-size: 0.92rem;
     font-weight: 700;

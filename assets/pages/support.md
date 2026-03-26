@@ -20,8 +20,6 @@ If you would like to support my work, you can use the options below.
   </div>
 
   <div class="support-card support-card-text">
-    <h2>Patreon</h2>
-    <p>Support me on Patreon.</p>
     <a class="support-button" href="https://www.patreon.com/c/oceanmallik" target="_blank" rel="noopener noreferrer">Support on Patreon</a>
   </div>
 </div>
