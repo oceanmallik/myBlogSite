@@ -9,9 +9,6 @@ email: hello@oceanmallik.com
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
 
-plugins:
-  - jekyll-sitemap
-
 defaults:
   - scope:
       path: ""
