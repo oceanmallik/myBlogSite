@@ -264,6 +264,14 @@ footer {
     color: var(--link);
 }
 
+.blog-content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1rem auto;
+    border-radius: 6px;
+}
+
 /* Archive Styles */
 .archive-list {
     list-style: none;
