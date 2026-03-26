@@ -5,7 +5,7 @@ date: 2025-11-22
 category: Journey
 ---
 
-![Gemini Generated Image](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDGt7fjWWJ4e5R2zXW3EHJ_Yn3azEVeEMAJTEM7qDy4fLx8a0JNiC35NtW2FEdHcSgcQNru_23LkBh-iFHaNjWwp6wO2XAxm2RS2-5u4-zQZf5h2yAvIXsmSxw9cz4HyX9Fg0gfHPHXHn2Q7uK17fdwcEnHS4SjU2gI1j2_Z4nexh8l-f4sl5Z6uKclWw/w676-h287/Gemini_Generated_Image_5mioiz5mioiz5mio.png)
+![Photo of Game Development](/assets/images/dev_journey.png)
 
 # Hello fellas! 
 
