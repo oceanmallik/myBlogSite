@@ -50,6 +50,7 @@ body {
     padding: 1.25rem;
     background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg) 35%);
     color: var(--text);
+    transition: background-color 0.4s ease, color 0.4s ease, background 0.4s ease;
 }
 
 main,
@@ -63,6 +64,7 @@ header {
     border-bottom: 1px solid var(--border);
     margin-bottom: 1.25rem;
     padding-bottom: 0.75rem;
+    transition: border-color 0.4s ease;
 }
 
 h1,
@@ -104,6 +106,18 @@ a:focus-visible {
     font-family: var(--ui);
     font-weight: 700;
     cursor: pointer;
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+#theme-toggle:hover {
+    filter: brightness(1.06);
+}
+
+#theme-toggle:focus-visible {
+    outline: 2px solid var(--link);
+    outline-offset: 2px;
 }
 
 nav a {
@@ -112,6 +126,7 @@ nav a {
     font-family: var(--ui);
     color: var(--link);
     border-bottom: transparent;
+    transition: color 0.4s ease, border-color 0.4s ease;
 }
 
 nav a:hover {
@@ -123,6 +138,7 @@ main {
     padding: 1rem 1.25rem;
     border: 1px solid var(--border);
     border-radius: 10px;
+    transition: background-color 0.4s ease, border-color 0.4s ease;
 }
 
 ul {
@@ -314,13 +330,15 @@ blockquote {
 }
 
 /* Responsive Design */
+@media (max-width: 640px) {
     body {
         padding: 0.75rem;
     }
 
     .header-row {
-        align-items: flex-start;
-        flex-direction: column;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     main {
