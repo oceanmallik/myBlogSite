@@ -89,7 +89,7 @@ body {
     padding: 1.25rem;
     background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg) 35%);
     color: var(--text);
-    transition: background-color 0.4s ease, color 0.4s ease, background 0.4s ease;
+    transition: var(--transition);
     position: relative;
     isolation: isolate;
 }
@@ -148,7 +148,7 @@ header {
     border-bottom: 1px solid var(--border);
     margin-bottom: 1.25rem;
     padding-bottom: 0.75rem;
-    transition: border-color 0.4s ease;
+    transition: var(--transition);
 }
 
 h1,
@@ -208,6 +208,10 @@ a:focus-visible {
 .header-row nav {
     margin-left: auto;
     flex-wrap: nowrap;
+    background: var(--nav-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
+    padding: 0.35rem 0.7rem;
 }
 
 .header-controls {
@@ -229,7 +233,7 @@ a:focus-visible {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.4s ease, border-color 0.4s ease;
+    transition: var(--transition);
     flex-shrink: 0;
 }
 
@@ -253,7 +257,7 @@ nav a {
     font-family: var(--ui);
     color: var(--link);
     border-bottom: transparent;
-    transition: color 0.4s ease, border-color 0.4s ease;
+    transition: var(--transition);
 }
 
 nav {
@@ -269,6 +273,7 @@ nav {
     padding: 0.35rem 0.85rem;
     background: var(--button-bg);
     color: var(--button-text);
+    transition: var(--transition);
 }
 
 .nav-support:hover {
@@ -285,7 +290,7 @@ main {
     padding: 1rem 1.25rem;
     border: 1px solid var(--border);
     border-radius: var(--border-radius);
-    transition: background-color 0.4s ease, border-color 0.4s ease;
+    transition: var(--transition);
 }
 
 ul {
@@ -316,7 +321,7 @@ p {
     gap: 1rem;
     align-items: center;
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     padding: 0.8rem 0.9rem;
     background: var(--surface);
     overflow: hidden;
@@ -348,7 +353,7 @@ p {
     max-width: 210px;
     justify-self: end;
     align-self: center;
-    border-radius: 7px;
+    border-radius: calc(var(--border-radius) - 3px);
     overflow: hidden;
     border: 1px solid var(--border);
     line-height: 0;
@@ -375,7 +380,7 @@ footer {
 }
 
 .footer-content {
-    max-width: 780px;
+    max-width: var(--container-width);
     margin: 0 auto;
     text-align: center;
 }
