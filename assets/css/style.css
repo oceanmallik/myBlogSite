@@ -310,6 +310,40 @@ p {
     font-size: 0.95rem;
 }
 
+.home-layout {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 1rem;
+    align-items: start;
+}
+
+.home-feed {
+    min-width: 0;
+}
+
+.latest-feature {
+    min-width: 0;
+}
+
+.latest-post-full {
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
+    padding: 0.95rem 1rem;
+    background: var(--surface);
+    position: sticky;
+    top: 1rem;
+    max-height: calc(100vh - 2rem);
+    overflow: auto;
+}
+
+.latest-post-full h3 {
+    margin: 0;
+}
+
+.latest-post-content {
+    margin-top: 0.55rem;
+}
+
 .posts-feed {
     display: grid;
     gap: 0.9rem;
@@ -628,6 +662,16 @@ blockquote {
 
     .post-card {
         grid-template-columns: 1fr;
+    }
+
+    .home-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .latest-post-full {
+        position: static;
+        max-height: none;
+        overflow: visible;
     }
 
     .post-card-media {
