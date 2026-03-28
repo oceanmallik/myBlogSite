@@ -40,10 +40,12 @@
         </div>
         <div class="header-controls">
             <a class="nav-support" href="{{ '/support/' | relative_url }}">Support Me</a>
-            <button id="theme-toggle" type="button" aria-label="Cycle through color themes">
-                <span id="theme-icon" aria-hidden="true">📜</span>
-            </button>
-            <label class="theme-select-wrap" for="theme-select">
+            <div class="theme-control-group">
+                <button id="theme-toggle" type="button" aria-label="Cycle through color themes">
+                    <span id="theme-icon" aria-hidden="true">📜</span>
+                    <span id="theme-name">Sepia</span>
+                </button>
+                <label class="theme-select-wrap" for="theme-select">
                 <span class="sr-only">Choose theme</span>
                 <select id="theme-select" aria-label="Choose theme">
                     <option value="sepia">Sepia</option>
@@ -51,7 +53,8 @@
                     <option value="light">White</option>
                     <option value="dark">Black</option>
                 </select>
-            </label>
+                </label>
+            </div>
         </div>
     </header>
 
@@ -75,6 +78,7 @@
             var icons = { dark: "🌙", light: "☀️", sepia: "📜", cyberpunk: "⚡" };
             var button = document.getElementById("theme-toggle");
             var icon = document.getElementById("theme-icon");
+            var name = document.getElementById("theme-name");
             var select = document.getElementById("theme-select");
             if (!button) {
                 return;
@@ -88,6 +92,9 @@
                 button.title = "Theme: " + labels[theme];
                 if (icon) {
                     icon.textContent = icons[theme] || "🎨";
+                }
+                if (name) {
+                    name.textContent = labels[theme] || "Theme";
                 }
                 if (select) {
                     select.value = theme;
