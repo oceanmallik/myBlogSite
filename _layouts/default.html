@@ -20,10 +20,8 @@
 
             if (storedTheme === "dark" || storedTheme === "light" || storedTheme === "sepia" || storedTheme === "cyberpunk") {
                 startTheme = storedTheme;
-            } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
-                startTheme = "light";
             } else {
-                startTheme = "dark";
+                startTheme = "sepia";
             }
 
             document.documentElement.setAttribute("data-theme", startTheme);
@@ -40,11 +38,20 @@
                 <a href="{{ '/about/' | relative_url }}">About</a>
             </nav>
             <button id="theme-toggle" type="button" aria-label="Cycle through color themes">
-                <span id="theme-icon" aria-hidden="true">🌙</span>
+                <span id="theme-icon" aria-hidden="true">📜</span>
             </button>
         </div>
         <div class="header-controls">
             <a class="nav-support" href="{{ '/support/' | relative_url }}">Support Me</a>
+            <label class="theme-select-wrap" for="theme-select">
+                <span class="sr-only">Choose theme</span>
+                <select id="theme-select" aria-label="Choose theme">
+                    <option value="sepia">Sepia</option>
+                    <option value="cyberpunk">Cyberpunk</option>
+                    <option value="light">White</option>
+                    <option value="dark">Black</option>
+                </select>
+            </label>
         </div>
     </header>
 
@@ -63,15 +70,16 @@
 
     <script>
         (function () {
-            var themes = ["dark", "light", "sepia", "cyberpunk"];
-            var labels = { dark: "Dark", light: "Light", sepia: "Sepia", cyberpunk: "Cyberpunk" };
+            var themes = ["sepia", "cyberpunk", "light", "dark"];
+            var labels = { dark: "Black", light: "White", sepia: "Sepia", cyberpunk: "Cyberpunk" };
             var icons = { dark: "🌙", light: "☀️", sepia: "📜", cyberpunk: "⚡" };
             var button = document.getElementById("theme-toggle");
             var icon = document.getElementById("theme-icon");
+            var select = document.getElementById("theme-select");
             if (!button) {
                 return;
             }
-            var currentTheme = document.documentElement.getAttribute("data-theme") || "dark";
+            var currentTheme = document.documentElement.getAttribute("data-theme") || "sepia";
 
             function applyTheme(theme) {
                 document.documentElement.setAttribute("data-theme", theme);
@@ -80,6 +88,9 @@
                 button.title = "Theme: " + labels[theme];
                 if (icon) {
                     icon.textContent = icons[theme] || "🎨";
+                }
+                if (select) {
+                    select.value = theme;
                 }
 
                 if (theme === "sepia") {
@@ -98,6 +109,13 @@
                 currentTheme = themes[(index + 1) % themes.length];
                 applyTheme(currentTheme);
             });
+
+            if (select) {
+                select.addEventListener("change", function (event) {
+                    currentTheme = event.target.value;
+                    applyTheme(currentTheme);
+                });
+            }
         })();
     </script>
 </body>
