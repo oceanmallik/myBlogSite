@@ -18,7 +18,7 @@
             var storedTheme = localStorage.getItem("theme");
             var startTheme;
 
-            if (storedTheme === "dark" || storedTheme === "light" || storedTheme === "sepia") {
+            if (storedTheme === "dark" || storedTheme === "light" || storedTheme === "sepia" || storedTheme === "cyberpunk") {
                 startTheme = storedTheme;
             } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
                 startTheme = "light";
@@ -63,9 +63,9 @@
 
     <script>
         (function () {
-            var themes = ["dark", "light", "sepia"];
-            var labels = { dark: "Dark", light: "Light", sepia: "Sepia" };
-            var icons = { dark: "🌙", light: "☀️", sepia: "📜" };
+            var themes = ["dark", "light", "sepia", "cyberpunk"];
+            var labels = { dark: "Dark", light: "Light", sepia: "Sepia", cyberpunk: "Cyberpunk" };
+            var icons = { dark: "🌙", light: "☀️", sepia: "📜", cyberpunk: "⚡" };
             var button = document.getElementById("theme-toggle");
             var icon = document.getElementById("theme-icon");
             if (!button) {

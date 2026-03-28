@@ -10,6 +10,18 @@
     --link: #666666;
     --button-bg: #2a2a2a;
     --button-text: #ffffff;
+    --primary-color: #666666;
+    --primary-hover: #888888;
+    --bg-main: var(--bg);
+    --bg-secondary: var(--bg-top);
+    --bg-card: var(--surface);
+    --nav-bg: transparent;
+    --text-title: var(--text);
+    --text-muted: var(--muted);
+    --border-color: var(--border);
+    --container-width: 780px;
+    --border-radius: 10px;
+    --transition: all 0.3s ease;
     --headline: "Fraunces", Georgia, serif;
     --body: "Source Serif 4", Georgia, serif;
     --ui: "Manrope", "Segoe UI", sans-serif;
@@ -37,6 +49,32 @@ html[data-theme="sepia"] {
     --link: #8b4c1b;
     --button-bg: #f3e4cb;
     --button-text: #55351d;
+}
+
+html[data-theme="cyberpunk"] {
+    --primary-color: #ffd400;
+    --primary-hover: #ffea70;
+    --bg-main: #0a0615;
+    --bg-secondary: #120a24;
+    --bg-card: #1a1033;
+    --nav-bg: rgba(10, 6, 21, 0.9);
+    --text-title: #ffffff;
+    --text-muted: #a7a1d1;
+    --border-color: #3a2a66;
+    --container-width: 1200px;
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+
+    /* Map custom theme tokens to existing site tokens. */
+    --bg: var(--bg-main);
+    --bg-top: var(--bg-secondary);
+    --surface: var(--bg-card);
+    --text: var(--text-title);
+    --muted: var(--text-muted);
+    --border: var(--border-color);
+    --link: var(--primary-color);
+    --button-bg: #23124a;
+    --button-text: #fff2aa;
 }
 
 
@@ -100,7 +138,7 @@ body.theme-fade-sepia {
 main,
 header,
 footer {
-    max-width: 780px;
+    max-width: var(--container-width);
     margin: 0 auto;
     position: relative;
     z-index: 1;
@@ -246,7 +284,7 @@ main {
     background: var(--surface);
     padding: 1rem 1.25rem;
     border: 1px solid var(--border);
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     transition: background-color 0.4s ease, border-color 0.4s ease;
 }
 
