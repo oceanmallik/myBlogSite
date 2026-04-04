@@ -39,18 +39,6 @@ html[data-theme="light"] {
     --button-text: #000000;
 }
 
-html[data-theme="sepia"] {
-    --bg: #f8f1e4;
-    --bg-top: #f0e3c6;
-    --surface: #fff9ef;
-    --text: #3b2f26;
-    --muted: #786252;
-    --border: #e7d7bd;
-    --link: #8b4c1b;
-    --button-bg: #f3e4cb;
-    --button-text: #55351d;
-}
-
 html[data-theme="cyberpunk"] {
     --primary-color: #ffd400;
     --primary-hover: #ffea70;
@@ -120,19 +108,6 @@ body::after {
         radial-gradient(42% 30% at 76% 38%, rgba(123, 191, 255, 0.22), rgba(123, 191, 255, 0) 76%);
     filter: blur(44px) saturate(130%);
     transform: translate3d(0, 0, 0) scale(1);
-}
-
-@keyframes sepiaThemeFade {
-    from {
-        opacity: 0.9;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-body.theme-fade-sepia {
-    animation: sepiaThemeFade 0.4s ease;
 }
 
 main,

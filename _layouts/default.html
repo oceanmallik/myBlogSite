@@ -18,10 +18,10 @@
             var storedTheme = localStorage.getItem("theme");
             var startTheme;
 
-            if (storedTheme === "dark" || storedTheme === "light" || storedTheme === "sepia" || storedTheme === "cyberpunk") {
+            if (storedTheme === "dark" || storedTheme === "light" || storedTheme === "cyberpunk") {
                 startTheme = storedTheme;
             } else {
-                startTheme = "sepia";
+                startTheme = "dark";
             }
 
             document.documentElement.setAttribute("data-theme", startTheme);
@@ -42,13 +42,12 @@
             <a class="nav-support" href="{{ '/support/' | relative_url }}">Support Me</a>
             <div class="theme-control-group">
                 <button id="theme-toggle" type="button" aria-label="Cycle through color themes">
-                    <span id="theme-icon" aria-hidden="true">📜</span>
-                    <span id="theme-name">Sepia</span>
+                    <span id="theme-icon" aria-hidden="true">🌙</span>
+                    <span id="theme-name">Black</span>
                 </button>
                 <label class="theme-select-wrap" for="theme-select">
                 <span class="sr-only">Choose theme</span>
                 <select id="theme-select" aria-label="Choose theme">
-                    <option value="sepia">Sepia</option>
                     <option value="cyberpunk">Cyberpunk</option>
                     <option value="light">White</option>
                     <option value="dark">Black</option>
@@ -73,9 +72,9 @@
 
     <script>
         (function () {
-            var themes = ["sepia", "cyberpunk", "light", "dark"];
-            var labels = { dark: "Black", light: "White", sepia: "Sepia", cyberpunk: "Cyberpunk" };
-            var icons = { dark: "🌙", light: "☀️", sepia: "📜", cyberpunk: "⚡" };
+            var themes = ["cyberpunk", "light", "dark"];
+            var labels = { dark: "Black", light: "White", cyberpunk: "Cyberpunk" };
+            var icons = { dark: "🌙", light: "☀️", cyberpunk: "⚡" };
             var button = document.getElementById("theme-toggle");
             var icon = document.getElementById("theme-icon");
             var name = document.getElementById("theme-name");
@@ -83,7 +82,7 @@
             if (!button) {
                 return;
             }
-            var currentTheme = document.documentElement.getAttribute("data-theme") || "sepia";
+            var currentTheme = document.documentElement.getAttribute("data-theme") || "dark";
 
             function applyTheme(theme) {
                 document.documentElement.setAttribute("data-theme", theme);
@@ -100,13 +99,6 @@
                     select.value = theme;
                 }
 
-                if (theme === "sepia") {
-                    document.body.classList.remove("theme-fade-sepia");
-                    void document.body.offsetWidth;
-                    document.body.classList.add("theme-fade-sepia");
-                } else {
-                    document.body.classList.remove("theme-fade-sepia");
-                }
             }
 
             applyTheme(currentTheme);

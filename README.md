@@ -14,7 +14,7 @@ This repository contains the full source for a content-first personal blog, incl
 - A homepage with a featured latest post and post cards
 - Archive page grouped by year
 - About, Support, and custom 404 pages
-- Multiple UI themes (Sepia, Cyberpunk, White, Black)
+- Multiple UI themes (Cyberpunk, White, Black)
 
 ## Tech Stack
 
