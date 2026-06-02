@@ -1,18 +1,20 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <meta name="author" content="{{ site.author }}">
-    <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
-    <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-    <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-    <link rel="icon" type="image/png" href="{{ '/favicon.png' | relative_url }}">
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-    <link rel="stylesheet" href="{{ '/assets/css/global.css' | relative_url }}">
+    <meta name="description" content="">
+    <meta name="author" content="Ocean Mallik">
+    <meta property="og:title" content=" | Ocean Mallik Talks">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <title> | Ocean Mallik Talks</title>
+    <link rel="stylesheet" href="/assets/css/global.css">
     <script>
         (function () {
             var storedTheme = localStorage.getItem("theme");
@@ -27,19 +29,20 @@
             document.documentElement.setAttribute("data-theme", startTheme);
         })();
     </script>
+    <style>html,body{height:100%}</style>
 </head>
 <body>
     <header>
         <div class="header-row">
-            <h1><a class="site-brand" href="{{ '/' | relative_url }}">{% if site.title contains ' Talks' %}<span class="brand-main">{{ site.title | replace: ' Talks', '' }}</span><span class="brand-talks">Talks</span>{% else %}{{ site.title }}{% endif %}</a></h1>
+            <h1><a class="site-brand" href="/"><span class="brand-main"></span><span class="brand-talks">Talks</span>Ocean Mallik Talks</a></h1>
             <nav>
-                <a href="{{ '/' | relative_url }}">Home</a>
-                <a href="{{ '/archive/' | relative_url }}">Archive</a>
-                <a href="{{ '/about/' | relative_url }}">About</a>
+                <a href="/">Home</a>
+                <a href="/archive/">Archive</a>
+                <a href="/about/">About</a>
             </nav>
         </div>
         <div class="header-controls">
-            <a class="nav-support" href="{{ '/support/' | relative_url }}">Support Me</a>
+            <a class="nav-support" href="/support/">Support Me</a>
             <div class="theme-control-group">
                 <button id="theme-toggle" type="button" aria-label="Cycle through color themes">
                     <span id="theme-icon" aria-hidden="true">🌙</span>
@@ -58,14 +61,28 @@
     </header>
 
     <main>
-        {{ content }} 
+    <article class="post">
+      <header class="post-header">
+        <h1>Trying hard to make a client</h1>
+        <div class="post-meta">
+          <span class="date">March 28, 2026</span>
+          <span class="reading-time" id="reading-time"></span>
+        </div>
+      </header>
+      <div class="blog-content"><h1>Hello friends!</h1>
+<p><img alt="Me working" src="/assets/images/my_photo.jpg" /></p>
+<p>I am trying hard to make a posting application for this site. Problem is lack of knowledge in android application development.</p>
+<p>So, still not giving up and trying again and again. May take other approach, but yeah. First I am willing to learn flutter and dark. I don't know how I will master it but yeah, I want to master it asap. </p>
+<p>Auntyr meye gaja khay btw</p></div>
+      <nav class="post-nav"><a href="/">&larr; Back to all posts</a></nav>
+    </article>
     </main>
 
     <footer>
         <div class="footer-content">
-            <p>&copy; {{ 'now' | date: '%Y' }} {{ site.author }}. Built with curiosity and too much caffeine.</p>
+            <p>&copy; 2026 Ocean Mallik. Built with curiosity and too much caffeine.</p>
             <div class="footer-links">
-                <a href="{{ '/archive/' | relative_url }}">Archive</a>
+                <a href="/archive/">Archive</a>
             </div>
         </div>
     </footer>

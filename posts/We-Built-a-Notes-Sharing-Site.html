@@ -1,0 +1,202 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Ocean Mallik">
+    <meta property="og:title" content=" | Ocean Mallik Talks">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <title> | Ocean Mallik Talks</title>
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <script>
+        (function () {
+            var storedTheme = localStorage.getItem("theme");
+            var startTheme;
+
+            if (storedTheme === "dark" || storedTheme === "light" || storedTheme === "cyberpunk") {
+                startTheme = storedTheme;
+            } else {
+                startTheme = "dark";
+            }
+
+            document.documentElement.setAttribute("data-theme", startTheme);
+        })();
+    </script>
+    <style>html,body{height:100%}</style>
+</head>
+<body>
+    <header>
+        <div class="header-row">
+            <h1><a class="site-brand" href="/"><span class="brand-main"></span><span class="brand-talks">Talks</span>Ocean Mallik Talks</a></h1>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/archive/">Archive</a>
+                <a href="/about/">About</a>
+            </nav>
+        </div>
+        <div class="header-controls">
+            <a class="nav-support" href="/support/">Support Me</a>
+            <div class="theme-control-group">
+                <button id="theme-toggle" type="button" aria-label="Cycle through color themes">
+                    <span id="theme-icon" aria-hidden="true">🌙</span>
+                    <span id="theme-name">Black</span>
+                </button>
+                <label class="theme-select-wrap" for="theme-select">
+                <span class="sr-only">Choose theme</span>
+                <select id="theme-select" aria-label="Choose theme">
+                    <option value="cyberpunk">Cyberpunk</option>
+                    <option value="light">White</option>
+                    <option value="dark">Black</option>
+                </select>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <main>
+    <article class="post">
+      <header class="post-header">
+        <h1>We Built a Notes-Sharing Site for Our University - Here&#x27;s How It Went</h1>
+        <div class="post-meta">
+          <span class="date">April 08, 2026</span>
+          <span class="reading-time" id="reading-time"></span>
+        </div>
+      </header>
+      <div class="blog-content"><h1>We Built a Notes-Sharing Site for Our University - Here's How It Went</h1>
+<blockquote>
+<p>No fancy pitch. Just a bunch of SE students tired of chasing notes in WhatsApp groups.</p>
+</blockquote>
+<p><strong>By Axiom Vessel · Daffodil International University · May 2026</strong></p>
+<hr />
+<p>Okay so let's be honest - every university student has been there. It's the night before a mid-term, you're desperately scrolling through a 500-message WhatsApp group trying to find that one PDF someone shared three weeks ago, and you just... can't. It's buried. It's gone. You're cooked.</p>
+<p>That was basically us. Every semester. Without fail.</p>
+<p>We're a small team of Software Engineering students at Daffodil International University (DIU), Bangladesh - and at some point we just got tired of it. Instead of complaining again, we figured, why not actually build something? So we did. We built <strong>DIU Notes Buddy</strong>.</p>
+<hr />
+<p><img alt="Photo of Site Banner" src="/assets/images/Site_Banner.png" /></p>
+<h2>So What Even Is It?</h2>
+<p>It's a pretty simple website. No login, no account, no subscription. You go to <strong><a href="https://diunotesbuddy.live/">diunotesbuddy.live</a></strong>, you find your course, and you grab the notes. That's it.</p>
+<p>We know it doesn't sound revolutionary. But that's kind of the point - sometimes the most useful thing isn't fancy, it's just <em>there when you need it</em>.</p>
+<blockquote>
+<p><em>"Helping Daffodil International University students excel in their studies. A note sharing site at your service."</em></p>
+</blockquote>
+<p>Right now the focus is on the Software Engineering department, since, well, that's us. Notes are organized by subject so you're not just dumped into a wall of files. There's also a section for other resources - things that are useful but don't quite fit the "course notes" category.</p>
+<hr />
+<h2>How We Built It</h2>
+<p>We kept the tech stack really simple, honestly on purpose. No React, no fancy framework, no over-engineering. Just the basics - the kind of stuff you can pick up and understand quickly even as a student:</p>
+<table>
+<thead>
+<tr>
+<th>Tech</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>HTML</code></td>
+<td>Page structure and content</td>
+</tr>
+<tr>
+<td><code>CSS</code></td>
+<td>Styling and layout</td>
+</tr>
+<tr>
+<td><code>JavaScript</code></td>
+<td>Interactivity</td>
+</tr>
+<tr>
+<td><code>Python</code></td>
+<td>Auto-generates the notes index</td>
+</tr>
+<tr>
+<td><code>GitHub Actions</code></td>
+<td>CI/CD and auto-deployment</td>
+</tr>
+</tbody>
+</table>
+<p>The Python part is actually pretty neat - we wrote a script that auto-generates the notes index so we don't have to manually update an HTML file every time someone adds a new PDF. It just runs and keeps things tidy. GitHub Actions handles the deployment side, so pushing to main means the site updates automatically. No manual fiddling.</p>
+<p>Nothing groundbreaking in terms of tech, but honestly building and shipping something end-to-end - domain, deployment, the whole thing - as a student team? That part felt good.</p>
+<hr />
+<h2>What We Actually Learned</h2>
+<p>Building for real users (our own classmates) hits differently than class assignments. You suddenly care a lot more about whether things actually work, whether the file structure makes sense, whether a junior student can find what they need without getting confused.</p>
+<p>We also got a crash course in the boring-but-important stuff - setting up a custom domain, making GitHub Actions not break on you, writing a generator script that doesn't corrupt your index when someone adds a weirdly-named file. Real stuff.</p>
+<blockquote>
+<p>💡 The most valuable lesson? <strong>Ship it.</strong> A working, simple site beats a perfect, non-existent one every time.</p>
+</blockquote>
+<p>There's also something weirdly motivating about seeing your friends actually use what you built. Like, that's real. That's not a grade - that's someone finding a note they needed at 11pm before an exam. That matters.</p>
+<hr />
+<h2>What's Next?</h2>
+<p>Honestly, we're still figuring that out. The site works, it's live, after launch, student may use it. For now that's enough. But there's definitely a lot of room to grow - better search, more departments, maybe a proper contribution flow so students can upload their own notes more easily.</p>
+<p>The whole thing is open source on GitHub under the <a href="https://github.com/AxiomVessel">AxiomVessel</a> org, so if you're a DIU student and want to contribute your notes or help improve the site, you're more than welcome. The more people share, the more useful it gets for everyone.</p>
+<p>And if you're a student from another university reading this thinking <em>"we need something like this"</em> - go build it. It's not as hard as it sounds, and it's way more satisfying than you'd expect.</p>
+<hr />
+<p><strong>Check it out, share your notes, or contribute to the project.</strong>
+<a href="https://diunotesbuddy.live/"><strong>🌐 Visit diunotesbuddy.live</strong></a></p></div>
+      <nav class="post-nav"><a href="/">&larr; Back to all posts</a></nav>
+    </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Ocean Mallik. Built with curiosity and too much caffeine.</p>
+            <div class="footer-links">
+                <a href="/archive/">Archive</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var themes = ["cyberpunk", "light", "dark"];
+            var labels = { dark: "Black", light: "White", cyberpunk: "Cyberpunk" };
+            var icons = { dark: "🌙", light: "☀️", cyberpunk: "⚡" };
+            var button = document.getElementById("theme-toggle");
+            var icon = document.getElementById("theme-icon");
+            var name = document.getElementById("theme-name");
+            var select = document.getElementById("theme-select");
+            if (!button) {
+                return;
+            }
+            var currentTheme = document.documentElement.getAttribute("data-theme") || "dark";
+
+            function applyTheme(theme) {
+                document.documentElement.setAttribute("data-theme", theme);
+                localStorage.setItem("theme", theme);
+                button.setAttribute("aria-label", "Theme: " + labels[theme]);
+                button.title = "Theme: " + labels[theme];
+                if (icon) {
+                    icon.textContent = icons[theme] || "🎨";
+                }
+                if (name) {
+                    name.textContent = labels[theme] || "Theme";
+                }
+                if (select) {
+                    select.value = theme;
+                }
+
+            }
+
+            applyTheme(currentTheme);
+
+            button.addEventListener("click", function () {
+                var index = themes.indexOf(currentTheme);
+                currentTheme = themes[(index + 1) % themes.length];
+                applyTheme(currentTheme);
+            });
+
+            if (select) {
+                select.addEventListener("change", function (event) {
+                    currentTheme = event.target.value;
+                    applyTheme(currentTheme);
+                });
+            }
+        })();
+    </script>
+</body>
+</html>

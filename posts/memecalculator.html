@@ -1,18 +1,20 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <meta name="author" content="{{ site.author }}">
-    <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
-    <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-    <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-    <link rel="icon" type="image/png" href="{{ '/favicon.png' | relative_url }}">
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-    <link rel="stylesheet" href="{{ '/assets/css/global.css' | relative_url }}">
+    <meta name="description" content="">
+    <meta name="author" content="Ocean Mallik">
+    <meta property="og:title" content=" | Ocean Mallik Talks">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <title> | Ocean Mallik Talks</title>
+    <link rel="stylesheet" href="/assets/css/global.css">
     <script>
         (function () {
             var storedTheme = localStorage.getItem("theme");
@@ -27,19 +29,20 @@
             document.documentElement.setAttribute("data-theme", startTheme);
         })();
     </script>
+    <style>html,body{height:100%}</style>
 </head>
 <body>
     <header>
         <div class="header-row">
-            <h1><a class="site-brand" href="{{ '/' | relative_url }}">{% if site.title contains ' Talks' %}<span class="brand-main">{{ site.title | replace: ' Talks', '' }}</span><span class="brand-talks">Talks</span>{% else %}{{ site.title }}{% endif %}</a></h1>
+            <h1><a class="site-brand" href="/"><span class="brand-main"></span><span class="brand-talks">Talks</span>Ocean Mallik Talks</a></h1>
             <nav>
-                <a href="{{ '/' | relative_url }}">Home</a>
-                <a href="{{ '/archive/' | relative_url }}">Archive</a>
-                <a href="{{ '/about/' | relative_url }}">About</a>
+                <a href="/">Home</a>
+                <a href="/archive/">Archive</a>
+                <a href="/about/">About</a>
             </nav>
         </div>
         <div class="header-controls">
-            <a class="nav-support" href="{{ '/support/' | relative_url }}">Support Me</a>
+            <a class="nav-support" href="/support/">Support Me</a>
             <div class="theme-control-group">
                 <button id="theme-toggle" type="button" aria-label="Cycle through color themes">
                     <span id="theme-icon" aria-hidden="true">🌙</span>
@@ -58,14 +61,42 @@
     </header>
 
     <main>
-        {{ content }} 
+    <article class="post">
+      <header class="post-header">
+        <h1>Breaking Math: Introducing the Meme Calculator 🧮💥</h1>
+        <div class="post-meta">
+          <span class="date">February 08, 2026</span>
+          <span class="reading-time" id="reading-time"></span>
+        </div>
+      </header>
+      <div class="blog-content"><p>Have you ever typed <code>9 + 10</code> into a calculator and felt disappointed when it gave you the <em>correct</em> answer?</p>
+<p>As software engineers, we spend a lot of time debugging code to make sure it follows logic perfectly. But recently, I decided to take a break from reality and build something that has absolutely <strong>zero respect for mathematics</strong>.</p>
+<p>Introducing the <strong>Meme Calculator</strong>.</p>
+<h3>What is it?</h3>
+<p>The Meme Calculator is exactly what it sounds like: a simple calculator app that refuses to do math correctly. Instead of standard arithmetic, it embraces internet culture and "meme logic."</p>
+<p>If you ask it to solve <code>2 + 2</code>, don't expect <code>4</code>. In this app, <code>2 + 2 = 5</code>. And <code>9 + 10</code>? That’s obviously <code>21</code>.</p>
+<h3>Under the Hood 🛠️</h3>
+<p>I built this project using the <strong>Godot Game Engine</strong> with <strong>C#</strong>. It was a fun way to experiment with Godot's UI system and scripting without worrying about complex algorithms—in fact, the goal was to make the algorithms intentionally wrong!</p>
+<p>A fun little detail about the development process: <strong>No generative AI was used to write this.</strong> Every line of intentionally bad math was handwritten by me.</p>
+<h3>Features</h3>
+<ul>
+<li><strong>Intentionally Incorrect Answers:</strong> It prioritizes comedy over accuracy.</li>
+<li><strong>Meme Logic:</strong> Supports classic internet equations.</li>
+<li><strong>Simple UI:</strong> Easy to use, even if the results are useless for your homework.</li>
+</ul>
+<h3>Try it Out</h3>
+<p>If you want to experience the frustration (and joy) of a broken calculator, you can check out the project and download the latest release on my GitHub.</p>
+<p><a href="https://github.com/oceanmallik/memeCalculator">Github Link</a></p>
+<p>Let me know if you find any "bugs" (or are they features?) in the comments below!</p></div>
+      <nav class="post-nav"><a href="/">&larr; Back to all posts</a></nav>
+    </article>
     </main>
 
     <footer>
         <div class="footer-content">
-            <p>&copy; {{ 'now' | date: '%Y' }} {{ site.author }}. Built with curiosity and too much caffeine.</p>
+            <p>&copy; 2026 Ocean Mallik. Built with curiosity and too much caffeine.</p>
             <div class="footer-links">
-                <a href="{{ '/archive/' | relative_url }}">Archive</a>
+                <a href="/archive/">Archive</a>
             </div>
         </div>
     </footer>
